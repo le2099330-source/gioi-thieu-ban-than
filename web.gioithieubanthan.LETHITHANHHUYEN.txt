@@ -1,0 +1,281 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới thiệu bản thân - Lê Thị Thanh Huyền</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff0f5;
+            color: #59404d;
+            line-height: 1.8;
+        }
+
+        header {
+            background: linear-gradient(135deg, #f8b9d0, #e8b8e8);
+            color: white;
+            text-align: center;
+            padding: 45px 20px;
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 18px;
+        }
+
+        nav {
+            background-color: #e9a8c4;
+            text-align: center;
+            padding: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 18px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #713b62;
+        }
+
+        .container {
+            width: 85%;
+            max-width: 950px;
+            margin: 30px auto;
+        }
+
+        .card {
+            background-color: white;
+            padding: 30px;
+            margin-bottom: 25px;
+            border-radius: 18px;
+            box-shadow: 0 4px 12px rgba(200, 120, 160, 0.15);
+        }
+
+        h2 {
+            color: #d66b9c;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #f5c6dc;
+            padding-bottom: 8px;
+        }
+
+        .avatar {
+            width: 125px;
+            height: 125px;
+            border-radius: 50%;
+            background-color: #f8c6dc;
+            color: white;
+            font-size: 35px;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 20px;
+            border: 5px solid #fce1ed;
+        }
+
+        .profile {
+            text-align: center;
+        }
+
+        .profile p {
+            margin: 8px;
+        }
+
+        .highlight {
+            color: #d65d97;
+            font-weight: bold;
+        }
+
+        .facebook {
+            display: inline-block;
+            background-color: #e9a8c4;
+            color: white;
+            padding: 10px 22px;
+            border-radius: 25px;
+            text-decoration: none;
+            margin-top: 15px;
+        }
+
+        .facebook:hover {
+            background-color: #cf76a0;
+        }
+
+        .school {
+            background-color: #fff5fa;
+            padding: 20px;
+            border-radius: 15px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+            border-radius: 15px;
+            margin-top: 15px;
+        }
+
+        footer {
+            background-color: #e9a8c4;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 26px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px 8px;
+            }
+
+            .container {
+                width: 92%;
+            }
+
+            iframe {
+                height: 230px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>🌸 XIN CHÀO! 🌸</h1>
+        <p>Chào mừng đến với trang web giới thiệu bản thân của tôi</p>
+    </header>
+
+    <nav>
+        <a href="#gioithieu">Giới thiệu</a>
+        <a href="#muctieu">Mục tiêu</a>
+        <a href="#uocmo">Ước mơ</a>
+        <a href="#video">Video</a>
+    </nav>
+
+    <div class="container">
+
+        <!-- Giới thiệu bản thân -->
+        <section class="card profile" id="gioithieu">
+            <div class="avatar">H</div>
+            <h2>💗 Giới thiệu bản thân</h2>
+
+            <p>Xin chào mọi người!</p>
+            <p>Tôi tên là <span class="highlight">
+                Lê Thị Thanh Huyền
+            </span>.</p>
+
+            <p>Đây là trang web nhỏ để giới thiệu về bản thân,
+            mục tiêu học tập và ước mơ trong tương lai của tôi.</p>
+
+            <a class="facebook"
+               href="https://www.facebook.com/le.huyen.020309/?locale=vi_VN"
+               target="_blank">
+                🌷 Facebook cá nhân
+            </a>
+        </section>
+
+        <!-- Nguyện vọng 1 -->
+        <section class="card" id="muctieu">
+            <h2>🎓 Nguyện vọng 1 của tôi</h2>
+
+            <div class="school">
+                <h3 class="highlight">
+                    Trường Đại học Y Dược Thái Bình
+                </h3>
+
+                <p>
+                    Đây là ngôi trường tôi mong muốn được theo học
+                    trong tương lai.
+                </p>
+
+                <p>
+                    Tôi hy vọng sẽ có cơ hội trở thành sinh viên
+                    của trường, được học tập và rèn luyện trong
+                    môi trường y khoa chuyên nghiệp.
+                </p>
+
+                <p>
+                    <b>Mục tiêu:</b> Đỗ nguyện vọng 1 vào
+                    Trường Đại học Y Dược Thái Bình.
+                </p>
+
+                <p>
+                    <a href="https://tbump.edu.vn/"
+                       target="_blank">
+                       🌐 Website chính thức của trường
+                    </a>
+                </p>
+            </div>
+        </section>
+
+        <!-- Ước mơ -->
+        <section class="card" id="uocmo">
+            <h2>💖 Ước mơ tương lai</h2>
+
+            <p>
+                Tôi mong muốn trở thành một người làm việc
+                trong ngành Y, có kiến thức chuyên môn vững vàng,
+                lòng yêu thương và tinh thần trách nhiệm.
+            </p>
+
+            <p>
+                Tôi sẽ cố gắng học tập mỗi ngày, không ngừng
+                hoàn thiện bản thân để từng bước chạm đến
+                ước mơ của mình.
+            </p>
+
+            <p class="highlight">
+                "Nỗ lực hôm nay – Thành công ngày mai!" 🌸
+            </p>
+        </section>
+
+        <!-- Video giới thiệu trường -->
+        <section class="card" id="video">
+            <h2>🎬 Video giới thiệu trường</h2>
+
+            <p>
+                Cùng tìm hiểu về Trường Đại học Y Dược
+                Thái Bình – ngôi trường mà tôi mong muốn
+                được học tập trong tương lai.
+            </p>
+
+            <iframe
+                src="https://www.youtube.com/embed/wwmOyJ08HhQ"
+                title="Giới thiệu Trường Đại học Y Dược Thái Bình"
+                allowfullscreen>
+            </iframe>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>💗 Trang web được thực hiện bởi Lê Thị Thanh Huyền 💗</p>
+        <p>Cảm ơn mọi người đã ghé thăm!</p>
+    </footer>
+
+</body>
+</html>
+
+
+
