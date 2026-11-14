@@ -1,60 +1,281 @@
+
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nguyễn Minh Hằng | 12A4</title>
-<style>
-:root{--baby:#f8cddd;--pink:#fce8ef;--deep:#b85f83;--text:#805267;--white:#fffdfd}
-*{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;font-family:"Segoe UI",Arial,sans-serif;color:var(--text);line-height:1.7;background:#fff5f8}
-header{padding:65px 20px;text-align:center;background:linear-gradient(135deg,#fbe0e9,#f5bfd2,#f9dce6);color:#99516f}
-header h1{font-size:clamp(30px,5vw,46px);margin:0}header p{margin:7px 0}
-nav{position:sticky;top:0;z-index:5;display:flex;justify-content:center;flex-wrap:wrap;gap:8px;padding:12px;background:#f9d8e4}
-nav a{color:#98516e;text-decoration:none;font-weight:700;padding:7px 14px;border-radius:20px}nav a:hover{background:white}
-main{width:min(920px,calc(100% - 28px));margin:30px auto 45px}
-.card{background:white;border:1px solid #f5d9e3;border-radius:23px;padding:clamp(20px,4vw,34px);margin:23px 0;box-shadow:0 8px 24px #d99bb51c}
-h2{text-align:center;color:var(--deep);margin:0 0 18px}
-.intro{display:block;max-width:720px;margin:0 auto;text-align:center}
-.tags{display:flex;gap:9px;flex-wrap:wrap;margin-top:15px}.tag{background:#fff0f5;border-radius:14px;padding:7px 12px}
-.hobbies{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.hobby{text-align:center;padding:20px 13px;border-radius:18px;background:#fff0f5;border:1px solid #f7dce5}
-.emoji{font-size:38px}.hobby h3{color:#b85f83;margin:4px}
-.video{position:relative;width:100%;aspect-ratio:16/9;border-radius:17px;overflow:hidden;background:#f8dce6}
-.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-.center{text-align:center}.hearts{font-size:25px;color:#d77f9f;letter-spacing:8px}
-footer{text-align:center;background:#f7cbd9;color:#8f4c68;padding:23px}
-@media(max-width:650px){.hobbies{grid-template-columns:1fr}nav a{font-size:14px;padding:6px 10px}}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới thiệu bản thân - Lê Thị Thanh Huyền</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff0f5;
+            color: #59404d;
+            line-height: 1.8;
+        }
+
+        header {
+            background: linear-gradient(135deg, #f8b9d0, #e8b8e8);
+            color: white;
+            text-align: center;
+            padding: 45px 20px;
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 18px;
+        }
+
+        nav {
+            background-color: #e9a8c4;
+            text-align: center;
+            padding: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 18px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #713b62;
+        }
+
+        .container {
+            width: 85%;
+            max-width: 950px;
+            margin: 30px auto;
+        }
+
+        .card {
+            background-color: white;
+            padding: 30px;
+            margin-bottom: 25px;
+            border-radius: 18px;
+            box-shadow: 0 4px 12px rgba(200, 120, 160, 0.15);
+        }
+
+        h2 {
+            color: #d66b9c;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #f5c6dc;
+            padding-bottom: 8px;
+        }
+
+        .avatar {
+            width: 125px;
+            height: 125px;
+            border-radius: 50%;
+            background-color: #f8c6dc;
+            color: white;
+            font-size: 35px;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 20px;
+            border: 5px solid #fce1ed;
+        }
+
+        .profile {
+            text-align: center;
+        }
+
+        .profile p {
+            margin: 8px;
+        }
+
+        .highlight {
+            color: #d65d97;
+            font-weight: bold;
+        }
+
+        .facebook {
+            display: inline-block;
+            background-color: #e9a8c4;
+            color: white;
+            padding: 10px 22px;
+            border-radius: 25px;
+            text-decoration: none;
+            margin-top: 15px;
+        }
+
+        .facebook:hover {
+            background-color: #cf76a0;
+        }
+
+        .school {
+            background-color: #fff5fa;
+            padding: 20px;
+            border-radius: 15px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+            border-radius: 15px;
+            margin-top: 15px;
+        }
+
+        footer {
+            background-color: #e9a8c4;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 26px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px 8px;
+            }
+
+            .container {
+                width: 92%;
+            }
+
+            iframe {
+                height: 230px;
+            }
+        }
+    </style>
 </head>
+
 <body>
-<header>
-<h1>🌷 Xin chào! Mình là Nguyễn Minh Hằng 🌷</h1>
-<p>Chào mừng bạn đến với góc nhỏ của mình!</p>
-<p>🎀 Học sinh lớp 12A4 · Trường THPT Hòn Gai 🎀</p>
-</header>
-<nav>
-<a href="#about">Giới thiệu</a><a href="#hobbies">Sở thích</a><a href="#video">Video</a><a href="#message">Lời nhắn</a>
-</nav>
-<main>
-<section class="card" id="about">
-<h2>♡ Giới thiệu bản thân ♡</h2>
-<div class="intro">
-<p>Xin chào mọi người! Mình tên là <strong>Nguyễn Minh Hằng</strong>, hiện đang là học sinh lớp <strong>12A4</strong> của <strong>Trường THPT Hòn Gai</strong>.</p>
-<p>Mình là người yêu thích những điều giản dị, vui vẻ và luôn muốn lưu giữ thật nhiều khoảnh khắc đáng nhớ bên bạn bè.</p>
-<div class="tags"><span class="tag">🎀 Nguyễn Minh Hằng</span><span class="tag">📚 12A4</span><span class="tag">🏫 THPT Hòn Gai</span></div>
-</div></section>
-<section class="card" id="hobbies">
-<h2>🌸 Sở thích của mình 🌸</h2><p class="center">Những điều nhỏ bé làm mình vui mỗi ngày!</p>
-<div class="hobbies">
-<div class="hobby"><div class="emoji">🍰</div><h3>Ăn uống</h3><p>Mình thích ăn những món ngon và khám phá nhiều món mới.</p></div>
-<div class="hobby"><div class="emoji">😴</div><h3>Ngủ</h3><p>Ngủ thật ngon để nghỉ ngơi và nạp lại năng lượng.</p></div>
-<div class="hobby"><div class="emoji">👭</div><h3>Đi chơi với bạn bè</h3><p>Mình thích đi chơi, trò chuyện và tạo kỷ niệm cùng bạn bè.</p></div>
-</div></section>
-<section class="card" id="video"><h2>🎬 Video mình muốn chia sẻ</h2><p class="center">Cùng xem video YouTube mình đã chọn nhé!</p>
-<div class="video"><iframe src="https://www.youtube-nocookie.com/embed/PF2_h2UgU6I" title="Video của Minh Hằng" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
-</section>
-<section class="card center" id="message"><h2>💌 Lời nhắn nhỏ</h2><p>Cảm ơn mọi người đã ghé thăm trang web của mình!</p><p>Chúc mọi người luôn vui vẻ, học tập thật tốt và có thật nhiều kỷ niệm đẹp nhé!</p><div class="hearts">♡ ♡ ♡</div></section>
-</main>
-<footer><strong>Made with love by Nguyễn Minh Hằng 💗</strong><br>12A4 · THPT Hòn Gai · 2026</footer>
-</body></html>
+
+    <header>
+        <h1>🌸 XIN CHÀO! 🌸</h1>
+        <p>Chào mừng đến với trang web giới thiệu bản thân của tôi</p>
+    </header>
+
+    <nav>
+        <a href="#gioithieu">Giới thiệu</a>
+        <a href="#muctieu">Mục tiêu</a>
+        <a href="#uocmo">Ước mơ</a>
+        <a href="#video">Video</a>
+    </nav>
+
+    <div class="container">
+
+        <!-- Giới thiệu bản thân -->
+        <section class="card profile" id="gioithieu">
+            <div class="avatar">H</div>
+            <h2>💗 Giới thiệu bản thân</h2>
+
+            <p>Xin chào mọi người!</p>
+            <p>Tôi tên là <span class="highlight">
+                Lê Thị Thanh Huyền
+            </span>.</p>
+
+            <p>Đây là trang web nhỏ để giới thiệu về bản thân,
+            mục tiêu học tập và ước mơ trong tương lai của tôi.</p>
+
+            <a class="facebook"
+               href="https://www.facebook.com/le.huyen.020309/?locale=vi_VN"
+               target="_blank">
+                🌷 Facebook cá nhân
+            </a>
+        </section>
+
+        <!-- Nguyện vọng 1 -->
+        <section class="card" id="muctieu">
+            <h2>🎓 Nguyện vọng 1 của tôi</h2>
+
+            <div class="school">
+                <h3 class="highlight">
+                    Trường Đại học Y Dược Thái Bình
+                </h3>
+
+                <p>
+                    Đây là ngôi trường tôi mong muốn được theo học
+                    trong tương lai.
+                </p>
+
+                <p>
+                    Tôi hy vọng sẽ có cơ hội trở thành sinh viên
+                    của trường, được học tập và rèn luyện trong
+                    môi trường y khoa chuyên nghiệp.
+                </p>
+
+                <p>
+                    <b>Mục tiêu:</b> Đỗ nguyện vọng 1 vào
+                    Trường Đại học Y Dược Thái Bình.
+                </p>
+
+                <p>
+                    <a href="https://tbump.edu.vn/"
+                       target="_blank">
+                       🌐 Website chính thức của trường
+                    </a>
+                </p>
+            </div>
+        </section>
+
+        <!-- Ước mơ -->
+        <section class="card" id="uocmo">
+            <h2>💖 Ước mơ tương lai</h2>
+
+            <p>
+                Tôi mong muốn trở thành một người làm việc
+                trong ngành Y, có kiến thức chuyên môn vững vàng,
+                lòng yêu thương và tinh thần trách nhiệm.
+            </p>
+
+            <p>
+                Tôi sẽ cố gắng học tập mỗi ngày, không ngừng
+                hoàn thiện bản thân để từng bước chạm đến
+                ước mơ của mình.
+            </p>
+
+            <p class="highlight">
+                "Nỗ lực hôm nay – Thành công ngày mai!" 🌸
+            </p>
+        </section>
+
+        <!-- Video giới thiệu trường -->
+        <section class="card" id="video">
+            <h2>🎬 Video giới thiệu trường</h2>
+
+            <p>
+                Cùng tìm hiểu về Trường Đại học Y Dược
+                Thái Bình – ngôi trường mà tôi mong muốn
+                được học tập trong tương lai.
+            </p>
+
+            <iframe
+                src="https://www.youtube.com/embed/wwmOyJ08HhQ"
+                title="Giới thiệu Trường Đại học Y Dược Thái Bình"
+                allowfullscreen>
+            </iframe>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>💗 Trang web được thực hiện bởi Lê Thị Thanh Huyền 💗</p>
+        <p>Cảm ơn mọi người đã ghé thăm!</p>
+    </footer>
+
+</body>
+</html>
+
+
+
