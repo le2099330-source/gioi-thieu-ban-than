@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nguyễn Minh Hằng | 12A4</title>
+<style>
+:root{--baby:#f8cddd;--pink:#fce8ef;--deep:#b85f83;--text:#805267;--white:#fffdfd}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:"Segoe UI",Arial,sans-serif;color:var(--text);line-height:1.7;background:#fff5f8}
+header{padding:65px 20px;text-align:center;background:linear-gradient(135deg,#fbe0e9,#f5bfd2,#f9dce6);color:#99516f}
+header h1{font-size:clamp(30px,5vw,46px);margin:0}header p{margin:7px 0}
+nav{position:sticky;top:0;z-index:5;display:flex;justify-content:center;flex-wrap:wrap;gap:8px;padding:12px;background:#f9d8e4}
+nav a{color:#98516e;text-decoration:none;font-weight:700;padding:7px 14px;border-radius:20px}nav a:hover{background:white}
+main{width:min(920px,calc(100% - 28px));margin:30px auto 45px}
+.card{background:white;border:1px solid #f5d9e3;border-radius:23px;padding:clamp(20px,4vw,34px);margin:23px 0;box-shadow:0 8px 24px #d99bb51c}
+h2{text-align:center;color:var(--deep);margin:0 0 18px}
+.intro{display:grid;grid-template-columns:210px 1fr;gap:25px;align-items:center}
+.photo{width:190px;height:190px;margin:auto;border-radius:50%;border:7px solid #f8d2df;background:#fff0f5;display:grid;place-items:center;font-size:64px;overflow:hidden}
+.photo img{width:100%;height:100%;object-fit:cover}
+.note{text-align:center;font-size:12px;color:#ad8193}
+.tags{display:flex;gap:9px;flex-wrap:wrap;margin-top:15px}.tag{background:#fff0f5;border-radius:14px;padding:7px 12px}
+.hobbies{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.hobby{text-align:center;padding:20px 13px;border-radius:18px;background:#fff0f5;border:1px solid #f7dce5}
+.emoji{font-size:38px}.hobby h3{color:#b85f83;margin:4px}
+.video{position:relative;width:100%;aspect-ratio:16/9;border-radius:17px;overflow:hidden;background:#f8dce6}
+.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.center{text-align:center}.hearts{font-size:25px;color:#d77f9f;letter-spacing:8px}
+footer{text-align:center;background:#f7cbd9;color:#8f4c68;padding:23px}
+@media(max-width:650px){.intro{grid-template-columns:1fr;text-align:center}.hobbies{grid-template-columns:1fr}nav a{font-size:14px;padding:6px 10px}}
+</style>
+</head>
+<body>
+<header>
+<h1>🌷 Xin chào! Mình là Nguyễn Minh Hằng 🌷</h1>
+<p>Chào mừng bạn đến với góc nhỏ của mình!</p>
+<p>🎀 Học sinh lớp 12A4 · Trường THPT Hòn Gai 🎀</p>
+</header>
+<nav>
+<a href="#about">Giới thiệu</a><a href="#hobbies">Sở thích</a><a href="#video">Video</a><a href="#message">Lời nhắn</a>
+</nav>
+<main>
+<section class="card" id="about">
+<h2>♡ Giới thiệu bản thân ♡</h2>
+<div class="intro">
+<div><div class="photo"><img src="anh.jpg" alt="Ảnh đại diện Nguyễn Minh Hằng" onerror="this.remove();this.parentElement.textContent='🎀'"></div><p class="note">Ảnh đại diện của Minh Hằng (thay bằng ảnh anh.jpg)</p></div>
+<div>
+<p>Xin chào mọi người! Mình tên là <strong>Nguyễn Minh Hằng</strong>, hiện đang là học sinh lớp <strong>12A4</strong> của <strong>Trường THPT Hòn Gai</strong>.</p>
+<p>Mình là người yêu thích những điều giản dị, vui vẻ và luôn muốn lưu giữ thật nhiều khoảnh khắc đáng nhớ bên bạn bè.</p>
+<div class="tags"><span class="tag">🎀 Nguyễn Minh Hằng</span><span class="tag">📚 12A4</span><span class="tag">🏫 THPT Hòn Gai</span></div>
+</div></div></section>
+<section class="card" id="hobbies">
+<h2>🌸 Sở thích của mình 🌸</h2><p class="center">Những điều nhỏ bé làm mình vui mỗi ngày!</p>
+<div class="hobbies">
+<div class="hobby"><div class="emoji">🍰</div><h3>Ăn uống</h3><p>Mình thích ăn những món ngon và khám phá nhiều món mới.</p></div>
+<div class="hobby"><div class="emoji">😴</div><h3>Ngủ</h3><p>Ngủ thật ngon để nghỉ ngơi và nạp lại năng lượng.</p></div>
+<div class="hobby"><div class="emoji">👭</div><h3>Đi chơi với bạn bè</h3><p>Mình thích đi chơi, trò chuyện và tạo kỷ niệm cùng bạn bè.</p></div>
+</div></section>
+<section class="card" id="video"><h2>🎬 Video mình muốn chia sẻ</h2><p class="center">Cùng xem video YouTube mình đã chọn nhé!</p>
+<div class="video"><iframe src="https://www.youtube-nocookie.com/embed/PF2_h2UgU6I" title="Video của Minh Hằng" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+</section>
+<section class="card center" id="message"><h2>💌 Lời nhắn nhỏ</h2><p>Cảm ơn mọi người đã ghé thăm trang web của mình!</p><p>Chúc mọi người luôn vui vẻ, học tập thật tốt và có thật nhiều kỷ niệm đẹp nhé!</p><div class="hearts">♡ ♡ ♡</div></section>
+</main>
+<footer><strong>Made with love by Nguyễn Minh Hằng 💗</strong><br>12A4 · THPT Hòn Gai · 2026</footer>
+</body></html>
