@@ -15,10 +15,7 @@ nav a{color:#98516e;text-decoration:none;font-weight:700;padding:7px 14px;border
 main{width:min(920px,calc(100% - 28px));margin:30px auto 45px}
 .card{background:white;border:1px solid #f5d9e3;border-radius:23px;padding:clamp(20px,4vw,34px);margin:23px 0;box-shadow:0 8px 24px #d99bb51c}
 h2{text-align:center;color:var(--deep);margin:0 0 18px}
-.intro{display:grid;grid-template-columns:210px 1fr;gap:25px;align-items:center}
-.photo{width:190px;height:190px;margin:auto;border-radius:50%;border:7px solid #f8d2df;background:#fff0f5;display:grid;place-items:center;font-size:64px;overflow:hidden}
-.photo img{width:100%;height:100%;object-fit:cover}
-.note{text-align:center;font-size:12px;color:#ad8193}
+.intro{display:block;max-width:720px;margin:0 auto;text-align:center}
 .tags{display:flex;gap:9px;flex-wrap:wrap;margin-top:15px}.tag{background:#fff0f5;border-radius:14px;padding:7px 12px}
 .hobbies{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .hobby{text-align:center;padding:20px 13px;border-radius:18px;background:#fff0f5;border:1px solid #f7dce5}
@@ -27,7 +24,7 @@ h2{text-align:center;color:var(--deep);margin:0 0 18px}
 .video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .center{text-align:center}.hearts{font-size:25px;color:#d77f9f;letter-spacing:8px}
 footer{text-align:center;background:#f7cbd9;color:#8f4c68;padding:23px}
-@media(max-width:650px){.intro{grid-template-columns:1fr;text-align:center}.hobbies{grid-template-columns:1fr}nav a{font-size:14px;padding:6px 10px}}
+@media(max-width:650px){.hobbies{grid-template-columns:1fr}nav a{font-size:14px;padding:6px 10px}}
 </style>
 </head>
 <body>
@@ -43,12 +40,10 @@ footer{text-align:center;background:#f7cbd9;color:#8f4c68;padding:23px}
 <section class="card" id="about">
 <h2>♡ Giới thiệu bản thân ♡</h2>
 <div class="intro">
-<div><div class="photo"><img src="anh.jpg" alt="Ảnh đại diện Nguyễn Minh Hằng" onerror="this.remove();this.parentElement.textContent='🎀'"></div><p class="note">Ảnh đại diện của Minh Hằng (thay bằng ảnh anh.jpg)</p></div>
-<div>
 <p>Xin chào mọi người! Mình tên là <strong>Nguyễn Minh Hằng</strong>, hiện đang là học sinh lớp <strong>12A4</strong> của <strong>Trường THPT Hòn Gai</strong>.</p>
 <p>Mình là người yêu thích những điều giản dị, vui vẻ và luôn muốn lưu giữ thật nhiều khoảnh khắc đáng nhớ bên bạn bè.</p>
 <div class="tags"><span class="tag">🎀 Nguyễn Minh Hằng</span><span class="tag">📚 12A4</span><span class="tag">🏫 THPT Hòn Gai</span></div>
-</div></div></section>
+</div></section>
 <section class="card" id="hobbies">
 <h2>🌸 Sở thích của mình 🌸</h2><p class="center">Những điều nhỏ bé làm mình vui mỗi ngày!</p>
 <div class="hobbies">
