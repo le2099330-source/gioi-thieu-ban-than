@@ -1,284 +1,110 @@
-
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giới thiệu bản thân - Lê Thị Thanh Huyền</title>
-    <meta property="og:title" content="Giới thiệu bản thân - Lê Thị Thanh Huyền">
-    <meta property="og:description" content="Website giới thiệu bản thân của Lê Thị Thanh Huyền">
-    <meta name="description" content="Website giới thiệu bản thân của Lê Thị Thanh Huyền">
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #fff0f5;
-            color: #59404d;
-            line-height: 1.8;
-        }
-
-        header {
-            background: linear-gradient(135deg, #f8b9d0, #e8b8e8);
-            color: white;
-            text-align: center;
-            padding: 45px 20px;
-        }
-
-        header h1 {
-            font-size: 36px;
-            margin-bottom: 10px;
-        }
-
-        header p {
-            font-size: 18px;
-        }
-
-        nav {
-            background-color: #e9a8c4;
-            text-align: center;
-            padding: 15px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 18px;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            color: #713b62;
-        }
-
-        .container {
-            width: 85%;
-            max-width: 950px;
-            margin: 30px auto;
-        }
-
-        .card {
-            background-color: white;
-            padding: 30px;
-            margin-bottom: 25px;
-            border-radius: 18px;
-            box-shadow: 0 4px 12px rgba(200, 120, 160, 0.15);
-        }
-
-        h2 {
-            color: #d66b9c;
-            margin-bottom: 15px;
-            border-bottom: 2px solid #f5c6dc;
-            padding-bottom: 8px;
-        }
-
-        .avatar {
-            width: 125px;
-            height: 125px;
-            border-radius: 50%;
-            background-color: #f8c6dc;
-            color: white;
-            font-size: 35px;
-            font-weight: bold;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 0 auto 20px;
-            border: 5px solid #fce1ed;
-        }
-
-        .profile {
-            text-align: center;
-        }
-
-        .profile p {
-            margin: 8px;
-        }
-
-        .highlight {
-            color: #d65d97;
-            font-weight: bold;
-        }
-
-        .facebook {
-            display: inline-block;
-            background-color: #e9a8c4;
-            color: white;
-            padding: 10px 22px;
-            border-radius: 25px;
-            text-decoration: none;
-            margin-top: 15px;
-        }
-
-        .facebook:hover {
-            background-color: #cf76a0;
-        }
-
-        .school {
-            background-color: #fff5fa;
-            padding: 20px;
-            border-radius: 15px;
-        }
-
-        iframe {
-            width: 100%;
-            height: 400px;
-            border: none;
-            border-radius: 15px;
-            margin-top: 15px;
-        }
-
-        footer {
-            background-color: #e9a8c4;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 30px;
-        }
-
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 26px;
-            }
-
-            nav a {
-                display: inline-block;
-                margin: 5px 8px;
-            }
-
-            .container {
-                width: 92%;
-            }
-
-            iframe {
-                height: 230px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Website giới thiệu bản thân của Lê Thị Thanh Huyền (Thóc), học sinh lớp 12A4 trường THPT Hòn Gai.">
+  <title>Lê Thị Thanh Huyền | Góc nhỏ của Thóc</title>
+  <style>
+    :root{--pink:#f7c8d9;--pink2:#fff0f5;--rose:#c66f94;--deep:#75465b;--white:#fffdfd}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Arial,sans-serif;font-size:16px;line-height:1.7;color:var(--deep);background:linear-gradient(135deg,#fff5f8,#fde7ef)}
+    header{min-height:430px;display:flex;align-items:center;justify-content:center;text-align:center;padding:55px 20px;background:linear-gradient(90deg,rgba(77,35,54,.58),rgba(77,35,54,.15)),url('images/thoc-banner.jpg') center 38%/cover no-repeat;background-color:#d99ab3;color:white}
+    .hero{max-width:800px;text-shadow:0 2px 12px rgba(0,0,0,.25)}
+    header h1{font-size:clamp(30px,5vw,46px);line-height:1.2;margin:0 0 12px}
+    header p{font-size:18px;margin:5px}
+    .tag{display:inline-block;margin-top:18px;padding:7px 18px;border-radius:30px;background:rgba(255,255,255,.88);color:#98516f;text-shadow:none;font-weight:bold}
+    nav{position:sticky;top:0;z-index:5;display:flex;justify-content:center;flex-wrap:wrap;gap:8px;padding:12px;background:rgba(255,231,239,.96);box-shadow:0 3px 14px #b66b871a}
+    nav a{font-size:15px;color:#98516f;text-decoration:none;font-weight:bold;padding:7px 14px;border-radius:22px}
+    nav a:hover{background:#f4c2d5}
+    main{width:min(940px,calc(100% - 30px));margin:32px auto 48px}
+    section{background:var(--white);border:1px solid #f6d8e3;border-radius:22px;padding:clamp(22px,4vw,34px);margin:22px 0;box-shadow:0 8px 25px #a9577812}
+    h2{font-size:27px;color:var(--rose);text-align:center;margin:0 0 18px}
+    p,li{font-size:16px}
+    .intro{display:grid;grid-template-columns:190px 1fr;gap:25px;align-items:center}
+    .portrait{width:180px;height:180px;object-fit:cover;object-position:center 35%;border-radius:50%;border:7px solid #f7d4e1;box-shadow:0 5px 18px #b66b8730}
+    .facts{display:flex;gap:9px;flex-wrap:wrap;margin-top:15px}
+    .fact{background:#fff0f5;border:1px solid #f5d4e0;padding:7px 12px;border-radius:14px;font-size:15px}
+    .hobbies{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .hobby{background:#fff1f6;border:1px solid #f5d5e1;border-radius:18px;text-align:center;padding:20px 12px}
+    .emoji{display:block;font-size:34px;margin-bottom:5px}
+    .hobby h3{font-size:19px;color:#b65f83;margin:5px 0}
+    .hobby p{font-size:16px;margin:5px 0}
+    .dream{text-align:center;background:#fff1f6;border-radius:18px;padding:22px}
+    .dream h3{font-size:23px;color:#b65f83;margin:0 0 8px}
+    .video-wrap{position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;border-radius:17px;background:#f6dce6}
+    .video-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+    .note{text-align:center}
+    footer{text-align:center;padding:24px 15px;background:#f2c3d5;color:#854c65}
+    footer p{margin:4px;font-size:15px}
+    @media(max-width:650px){header{min-height:340px}.intro{grid-template-columns:1fr;text-align:center}.portrait{margin:auto}.facts{justify-content:center}.hobbies{grid-template-columns:1fr}nav{gap:2px}nav a{padding:7px 10px}}
+  </style>
 </head>
-
 <body>
-
-    <header>
-        <h1>🌸 XIN CHÀO! 🌸</h1>
-        <p>Chào mừng đến với trang web giới thiệu bản thân của tôi</p>
-    </header>
-
-    <nav>
-        <a href="#gioithieu">Giới thiệu</a>
-        <a href="#muctieu">Mục tiêu</a>
-        <a href="#uocmo">Ước mơ</a>
-        <a href="#video">Video</a>
-    </nav>
-
-    <div class="container">
-
-        <!-- Giới thiệu bản thân -->
-        <section class="card profile" id="gioithieu">
-            <div class="avatar">H</div>
-            <h2>💗 Giới thiệu bản thân</h2>
-
-            <p>Xin chào mọi người!</p>
-            <p>Tôi tên là <span class="highlight">
-                Lê Thị Thanh Huyền
-            </span>.</p>
-
-            <p>Đây là trang web nhỏ để giới thiệu về bản thân,
-            mục tiêu học tập và ước mơ trong tương lai của tôi.</p>
-
-            <a class="facebook"
-               href="https://www.facebook.com/le.huyen.020309/?locale=vi_VN"
-               target="_blank">
-                🌷 Facebook cá nhân
-            </a>
-        </section>
-
-        <!-- Nguyện vọng 1 -->
-        <section class="card" id="muctieu">
-            <h2>🎓 Nguyện vọng 1 của tôi</h2>
-
-            <div class="school">
-                <h3 class="highlight">
-                    Trường Đại học Y Dược Thái Bình
-                </h3>
-
-                <p>
-                    Đây là ngôi trường tôi mong muốn được theo học
-                    trong tương lai.
-                </p>
-
-                <p>
-                    Tôi hy vọng sẽ có cơ hội trở thành sinh viên
-                    của trường, được học tập và rèn luyện trong
-                    môi trường y khoa chuyên nghiệp.
-                </p>
-
-                <p>
-                    <b>Mục tiêu:</b> Đỗ nguyện vọng 1 vào
-                    Trường Đại học Y Dược Thái Bình.
-                </p>
-
-                <p>
-                    <a href="https://tbump.edu.vn/"
-                       target="_blank">
-                       🌐 Website chính thức của trường
-                    </a>
-                </p>
-            </div>
-        </section>
-
-        <!-- Ước mơ -->
-        <section class="card" id="uocmo">
-            <h2>💖 Ước mơ tương lai</h2>
-
-            <p>
-                Tôi mong muốn trở thành một người làm việc
-                trong ngành Y, có kiến thức chuyên môn vững vàng,
-                lòng yêu thương và tinh thần trách nhiệm.
-            </p>
-
-            <p>
-                Tôi sẽ cố gắng học tập mỗi ngày, không ngừng
-                hoàn thiện bản thân để từng bước chạm đến
-                ước mơ của mình.
-            </p>
-
-            <p class="highlight">
-                "Nỗ lực hôm nay – Thành công ngày mai!" 🌸
-            </p>
-        </section>
-
-        <!-- Video giới thiệu trường -->
-        <section class="card" id="video">
-            <h2>🎬 Video giới thiệu trường</h2>
-
-            <p>
-                Cùng tìm hiểu về Trường Đại học Y Dược
-                Thái Bình – ngôi trường mà tôi mong muốn
-                được học tập trong tương lai.
-            </p>
-
-            <iframe
-                src="https://www.youtube.com/embed/wwmOyJ08HhQ"
-                title="Giới thiệu Trường Đại học Y Dược Thái Bình"
-                allowfullscreen>
-            </iframe>
-        </section>
-
+  <header>
+    <div class="hero">
+      <h1>🌷 Xin chào, mình là Lê Thị Thanh Huyền! 🌷</h1>
+      <p>Chào mừng bạn đến với góc nhỏ của Thóc</p>
+      <span class="tag">Thóc · Lớp 12A4 · THPT Hòn Gai</span>
     </div>
-
-    <footer>
-        <p>💗 Trang web được thực hiện bởi Lê Thị Thanh Huyền 💗</p>
-        <p>Cảm ơn mọi người đã ghé thăm!</p>
-    </footer>
-
+  </header>
+  <nav aria-label="Điều hướng">
+    <a href="#gioithieu">Giới thiệu</a>
+    <a href="#sothich">Sở thích</a>
+    <a href="#uocmo">Ước mơ</a>
+    <a href="#video">Video về trường</a>
+  </nav>
+  <main>
+    <section id="gioithieu">
+      <h2>♡ Một chút về mình ♡</h2>
+      <div class="intro">
+        <img class="portrait" src="images/thoc-banner.jpg" alt="Ảnh Thóc hồi nhỏ">
+        <div>
+          <p>Xin chào mọi người! Mình là <strong>Lê Thị Thanh Huyền</strong>, mọi người thường gọi mình bằng biệt danh ở nhà là <strong>Thóc</strong>.</p>
+          <p>Hiện tại, mình là học sinh lớp <strong>12A4</strong>, trường <strong>THPT Hòn Gai</strong>. Đây là nơi mình lưu giữ một vài điều dễ thương về bản thân, những sở thích và ước mơ trong tương lai.</p>
+          <div class="facts">
+            <span class="fact">🎀 Lê Thị Thanh Huyền</span>
+            <span class="fact">🌾 Biệt danh: Thóc</span>
+            <span class="fact">📚 Lớp 12A4</span>
+            <span class="fact">🏫 THPT Hòn Gai</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="sothich">
+      <h2>🌸 Những sở thích của mình 🌸</h2>
+      <p class="note">Những điều nhỏ bé giúp mỗi ngày của mình thêm vui vẻ.</p>
+      <div class="hobbies">
+        <article class="hobby"><span class="emoji">🎧</span><h3>Nghe nhạc</h3><p>Mình thích nghe nhạc để thư giãn và tìm thấy cảm hứng.</p></article>
+        <article class="hobby"><span class="emoji">🎬</span><h3>Xem phim Hàn</h3><p>Những bộ phim Hàn Quốc luôn mang đến nhiều cảm xúc thú vị.</p></article>
+        <article class="hobby"><span class="emoji">😴</span><h3>Ngủ</h3><p>Ngủ thật ngon để nạp năng lượng sau những giờ học tập.</p></article>
+      </div>
+    </section>
+    <section id="uocmo">
+      <h2>💗 Ước mơ tương lai 💗</h2>
+      <div class="dream">
+        <h3>Trường Đại học Y Dược Thái Bình</h3>
+        <p>Đây là ngôi trường mình mong muốn được theo học trong tương lai. Mình sẽ cố gắng học tập, rèn luyện mỗi ngày để tiến gần hơn đến ước mơ của mình.</p>
+        <p><a href="https://tbump.edu.vn/" target="_blank" rel="noopener">🌐 Website chính thức của trường</a></p>
+      </div>
+    </section>
+    <section id="video">
+      <h2>🎬 Video giới thiệu Trường Đại học Y Dược Thái Bình</h2>
+      <p class="note">Cùng tìm hiểu về ngôi trường mà mình mong muốn được học tập nhé!</p>
+      <div class="video-wrap">
+        <iframe src="https://www.youtube-nocookie.com/embed/wwmOyJ08HhQ" title="Video giới thiệu Trường Đại học Y Dược Thái Bình" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+    </section>
+    <section class="note">
+      <h2>💌 Lời nhắn nhỏ</h2>
+      <p>Cảm ơn mọi người đã ghé thăm góc nhỏ của Thóc!</p>
+      <p>“Nỗ lực hôm nay – Chạm tới ước mơ ngày mai.” 🌷</p>
+    </section>
+  </main>
+  <footer>
+    <p><strong>Made with love by Lê Thị Thanh Huyền (Thóc) 💗</strong></p>
+    <p>12A4 · Trường THPT Hòn Gai · 2026</p>
+  </footer>
 </body>
 </html>
-
-
-
