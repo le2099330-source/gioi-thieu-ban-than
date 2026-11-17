@@ -4,66 +4,98 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Website giới thiệu bản thân của Lê Thị Thanh Huyền (Thóc), học sinh lớp 12A4 trường THPT Hòn Gai.">
-  <title>Lê Thị Thanh Huyền | Góc nhỏ của Thóc</title>
+  <title>Lê Thị Thanh Huyền | Thế giới riêng của Thóc</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
   <style>
-    :root{--pink:#f7c8d9;--pink2:#fff0f5;--rose:#c66f94;--deep:#75465b;--white:#fffdfd}
+    :root{--wine:#210d17;--wine2:#351522;--rose:#d69aaa;--pink:#f4dce3;--gold:#e9c98d;--muted:#d5bbc4;--card:#fff9fb}
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
-    body{margin:0;font-family:Arial,sans-serif;font-size:16px;line-height:1.7;color:var(--deep);background:linear-gradient(135deg,#fff5f8,#fde7ef)}
-    header{min-height:430px;display:flex;align-items:center;justify-content:center;text-align:center;padding:55px 20px;background:linear-gradient(90deg,rgba(77,35,54,.58),rgba(77,35,54,.15)),url('images/thoc-banner.jpg.jpg') center 38%/cover no-repeat;background-color:#d99ab3;color:white}
-    .hero{max-width:800px;text-shadow:0 2px 12px rgba(0,0,0,.25)}
-    header h1{font-size:clamp(30px,5vw,46px);line-height:1.2;margin:0 0 12px}
-    header p{font-size:18px;margin:5px}
-    .tag{display:inline-block;margin-top:18px;padding:7px 18px;border-radius:30px;background:rgba(255,255,255,.88);color:#98516f;text-shadow:none;font-weight:bold}
-    nav{position:sticky;top:0;z-index:5;display:flex;justify-content:center;flex-wrap:wrap;gap:8px;padding:12px;background:rgba(255,231,239,.96);box-shadow:0 3px 14px #b66b871a}
-    nav a{font-size:15px;color:#98516f;text-decoration:none;font-weight:bold;padding:7px 14px;border-radius:22px}
-    nav a:hover{background:#f4c2d5}
-    main{width:min(940px,calc(100% - 30px));margin:32px auto 48px}
-    section{background:var(--white);border:1px solid #f6d8e3;border-radius:22px;padding:clamp(22px,4vw,34px);margin:22px 0;box-shadow:0 8px 25px #a9577812}
-    h2{font-size:27px;color:var(--rose);text-align:center;margin:0 0 18px}
-    p,li{font-size:16px}
-    .intro{display:grid;grid-template-columns:190px 1fr;gap:25px;align-items:center}
-    .portrait{width:180px;height:180px;object-fit:cover;object-position:center 35%;border-radius:50%;border:7px solid #f7d4e1;box-shadow:0 5px 18px #b66b8730}
-    .facts{display:flex;gap:9px;flex-wrap:wrap;margin-top:15px}
-    .fact{background:#fff0f5;border:1px solid #f5d4e0;padding:7px 12px;border-radius:14px;font-size:15px}
-    .hobbies{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-    .hobby{background:#fff1f6;border:1px solid #f5d5e1;border-radius:18px;text-align:center;padding:14px 12px;overflow:hidden}
-    .hobby img{display:block;width:100%;height:180px;object-fit:cover;border-radius:13px;margin:0 auto 12px}
-    .emoji{display:block;font-size:34px;margin-bottom:5px}
-    .hobby h3{font-size:19px;color:#b65f83;margin:5px 0}
-    .hobby p{font-size:16px;margin:5px 0}
-    .dream{text-align:center;background:#fff1f6;border-radius:18px;padding:22px}
-    .dream h3{font-size:23px;color:#b65f83;margin:0 0 8px}
-    .video-wrap{position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;border-radius:17px;background:#f6dce6}
+    body{margin:0;background:#fff7f9;color:#4b2938;font-family:'DM Sans',Arial,sans-serif;font-size:16px;line-height:1.7}
+    .topbar{height:auto;min-height:78px;padding:12px clamp(20px,7vw,110px);display:flex;align-items:center;justify-content:space-between;gap:18px;background:#1c0b13;color:var(--pink)}
+    .brand{font-family:'Playfair Display',Georgia,serif;font-style:italic;font-size:27px;color:var(--gold);white-space:nowrap}
+    nav{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:7px}
+    nav a{color:#f8eaf0;text-decoration:none;font-size:14px;font-weight:600;padding:7px 12px;border-radius:22px;transition:.2s}
+    nav a:hover{background:#563044;color:white}
+    .hero{min-height:590px;position:relative;overflow:hidden;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:55px clamp(24px,9vw,145px);background:radial-gradient(ellipse at 18% 35%,#58263d 0%,#351522 44%,#1c0b13 100%);color:white}
+    .hero:before,.hero:after{content:"";position:absolute;border:1px solid #d9b5c433;border-radius:50%;pointer-events:none}
+    .hero:before{width:420px;height:420px;left:-190px;top:-190px}
+    .hero:after{width:560px;height:560px;right:-300px;bottom:-340px}
+    .hero-copy{position:relative;z-index:2;max-width:570px;padding:25px 0}
+    .eyebrow{color:var(--gold);font-size:12px;letter-spacing:4px;font-weight:700;text-transform:uppercase}
+    .hero h1{font-family:'Playfair Display',Georgia,serif;font-size:clamp(48px,6.4vw,88px);line-height:1.04;font-weight:500;margin:22px 0 12px;color:#fff1f4}
+    .hero h1 em{display:block;color:#d99daf;font-weight:500}
+    .hero h2{font-family:'Playfair Display',Georgia,serif;font-size:clamp(25px,3vw,38px);font-style:italic;color:var(--gold);font-weight:500;margin:18px 0}
+    .hero-copy p{max-width:470px;color:#e4cfd6;font-size:16px;line-height:1.9}
+    .hero-tag{display:inline-block;margin-top:18px;padding:8px 17px;border:1px solid #dcb9c47a;border-radius:30px;color:#f7e7ec;font-size:14px}
+    .hero-photo{position:relative;z-index:1;justify-self:end;width:min(100%,480px);height:470px;border-radius:48% 48% 18px 18px;overflow:hidden;border:1px solid #f0d4dd55;box-shadow:0 25px 70px #09030988}
+    .hero-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#210d1766,transparent 45%),linear-gradient(90deg,#35152255,transparent 40%)}
+    .hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center 38%;display:block}
+    main{width:min(1080px,calc(100% - 36px));margin:42px auto 60px}
+    section{margin:28px 0;padding:clamp(23px,4vw,42px);border-radius:22px;background:var(--card);box-shadow:0 10px 35px #7e3c5510;border:1px solid #f0dce3}
+    .section-kicker{text-align:center;color:#b77b90;font-size:12px;letter-spacing:3px;text-transform:uppercase;font-weight:700;margin:0 0 4px}
+    section h2{font-family:'Playfair Display',Georgia,serif;text-align:center;font-size:clamp(28px,4vw,38px);font-weight:500;color:#743d55;margin:0 0 24px}
+    .intro{display:grid;grid-template-columns:230px 1fr;gap:30px;align-items:center}
+    .portrait{width:220px;height:250px;object-fit:cover;object-position:center 38%;border-radius:120px 120px 18px 18px;border:6px solid #f3dce4;box-shadow:0 10px 30px #8c50651c}
+    .intro p{margin:8px 0;color:#654454}
+    .facts{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px}
+    .fact{background:#f9eaf0;border:1px solid #efd3de;padding:7px 13px;border-radius:30px;font-size:14px;color:#78475c}
+    .hobbies{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+    .hobby{background:white;border:1px solid #efd9e2;border-radius:18px;overflow:hidden;box-shadow:0 8px 24px #6b314610;display:flex;flex-direction:column}
+    .hobby img{width:100%;height:255px;display:block;object-fit:cover;background:#f1dce4}
+    .hobby-body{padding:16px 17px 19px;display:flex;flex-direction:column;flex:1}
+    .hobby h3{font-family:'Playfair Display',Georgia,serif;color:#874b64;font-size:22px;font-weight:600;margin:0 0 6px}
+    .hobby p{font-size:14px;color:#755b67;margin:0 0 13px}
+    .hobby a{margin-top:auto;align-self:flex-start;color:#9a526e;font-size:13px;font-weight:700;text-decoration:none;border-bottom:1px solid #d7a6b8}
+    .hobby a:hover{color:#55263c}
+    .sleep-card{display:flex;align-items:center;justify-content:center;min-height:255px;background:linear-gradient(145deg,#f7e3ea,#f1d1dc);font-size:76px}
+    .dream{text-align:center;background:linear-gradient(135deg,#fff0f5,#f7dfe8);border:1px solid #efd1dd;border-radius:18px;padding:28px}
+    .dream h3{font-family:'Playfair Display',Georgia,serif;font-size:26px;color:#85445f;margin:0 0 8px}
+    .dream p{max-width:700px;margin:8px auto;color:#654454}
+    .dream a{color:#914d69;font-weight:700}
+    .video-wrap{position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;border-radius:17px;background:#f6dce6;box-shadow:0 8px 25px #743d551c}
     .video-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-    .note{text-align:center}
-    footer{text-align:center;padding:24px 15px;background:#f2c3d5;color:#854c65}
-    footer p{margin:4px;font-size:15px}
-    @media(max-width:650px){header{min-height:340px}.intro{grid-template-columns:1fr;text-align:center}.portrait{margin:auto}.facts{justify-content:center}.hobbies{grid-template-columns:1fr}nav{gap:2px}nav a{padding:7px 10px}}
+    .note{text-align:center;color:#755b67}
+    footer{text-align:center;padding:27px 16px;background:#1c0b13;color:#e9d1da}
+    footer strong{font-family:'Playfair Display',Georgia,serif;color:var(--gold);font-size:19px;font-weight:500}
+    footer p{margin:4px;font-size:14px}
+    @media(max-width:760px){.topbar{flex-direction:column;justify-content:center}.hero{grid-template-columns:1fr;gap:28px;text-align:center;padding:45px 24px}.hero-copy{margin:auto}.hero-copy p{margin-left:auto;margin-right:auto}.hero-photo{justify-self:center;width:min(100%,390px);height:370px}.intro{grid-template-columns:1fr;text-align:center}.portrait{margin:auto}.facts{justify-content:center}.hobbies{grid-template-columns:1fr 1fr}.hobby img,.sleep-card{height:210px;min-height:210px}}
+    @media(max-width:520px){nav{justify-content:center}nav a{font-size:13px;padding:6px 9px}.hero{min-height:unset}.hero-photo{height:320px}.hobbies{grid-template-columns:1fr}.hobby img,.sleep-card{height:250px;min-height:250px}}
   </style>
 </head>
 <body>
-  <header>
-    <div class="hero">
-      <h1>🌷 Xin chào, mình là Lê Thị Thanh Huyền! 🌷</h1>
-      <p>Chào mừng bạn đến với góc nhỏ của Thóc</p>
-      <span class="tag">Thóc · Lớp 12A4 · THPT Hòn Gai</span>
+  <div class="topbar">
+    <div class="brand">Thế Giới Của Thóc</div>
+    <nav aria-label="Điều hướng">
+      <a href="#trangchu">Trang chủ</a>
+      <a href="#gioithieu">Giới thiệu</a>
+      <a href="#sothich">Sở thích</a>
+      <a href="#uocmo">Ước mơ</a>
+      <a href="#video">Video</a>
+    </nav>
+  </div>
+  <header class="hero" id="trangchu">
+    <div class="hero-copy">
+      <div class="eyebrow">Chào mừng đến với thế giới của mình</div>
+      <h1>Thế Giới <em>Riêng Của Thóc</em></h1>
+      <h2>Một chút về tôi</h2>
+      <p>Xin chào! Mình là Lê Thị Thanh Huyền. Đây là góc nhỏ lưu giữ những sở thích, ước mơ và những điều dễ thương tạo nên câu chuyện của riêng mình.</p>
+      <span class="hero-tag">🌾 Thóc · Lớp 12A4 · THPT Hòn Gai</span>
+    </div>
+    <div class="hero-photo">
+      <img src="images/thoc-banner.jpg.jpg" alt="Thóc khi còn nhỏ">
     </div>
   </header>
-  <nav aria-label="Điều hướng">
-    <a href="#gioithieu">Giới thiệu</a>
-    <a href="#sothich">Sở thích</a>
-    <a href="#uocmo">Ước mơ</a>
-    <a href="#video">Video về trường</a>
-  </nav>
   <main>
     <section id="gioithieu">
+      <p class="section-kicker">About me</p>
       <h2>♡ Một chút về mình ♡</h2>
       <div class="intro">
         <img class="portrait" src="images/thoc-banner.jpg.jpg" alt="Ảnh Thóc hồi nhỏ">
         <div>
           <p>Xin chào mọi người! Mình là <strong>Lê Thị Thanh Huyền</strong>, mọi người thường gọi mình bằng biệt danh ở nhà là <strong>Thóc</strong>.</p>
-          <p>Hiện tại, mình là học sinh lớp <strong>12A4</strong>, trường <strong>THPT Hòn Gai</strong>. Đây là nơi mình lưu giữ một vài điều dễ thương về bản thân, những sở thích và ước mơ trong tương lai.</p>
+          <p>Hiện tại, mình là học sinh lớp <strong>12A4</strong>, trường <strong>THPT Hòn Gai</strong>. Mình tạo website này để chia sẻ một vài điều về bản thân, những sở thích và ước mơ trong tương lai.</p>
           <div class="facts">
             <span class="fact">🎀 Lê Thị Thanh Huyền</span>
             <span class="fact">🌾 Biệt danh: Thóc</span>
@@ -74,33 +106,57 @@
       </div>
     </section>
     <section id="sothich">
-      <h2>🌸 Những sở thích của mình 🌸</h2>
-      <p class="note">Những điều nhỏ bé giúp mỗi ngày của mình thêm vui vẻ.</p>
+      <p class="section-kicker">My favorites</p>
+      <h2>Những điều mình yêu thích</h2>
+      <p class="note">Âm nhạc, phim ảnh và những giấc ngủ ngon luôn làm ngày của mình vui hơn một chút.</p>
       <div class="hobbies">
-        <article class="hobby"><img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=900&amp;auto=format&amp;fit=crop&amp;q=85" alt="Không gian biểu diễn âm nhạc"><h3>🎧 Nghe nhạc</h3><p>Mình thích nghe nhạc để thư giãn và tìm thấy cảm hứng.</p></article>
-        <article class="hobby"><img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=900&amp;auto=format&amp;fit=crop&amp;q=85" alt="Không gian xem phim"><h3>🎬 Xem phim Hàn</h3><p>Những bộ phim Hàn Quốc luôn mang đến nhiều cảm xúc thú vị.</p></article>
-        <article class="hobby"><span class="emoji">😴</span><h3>Ngủ</h3><p>Ngủ thật ngon để nạp năng lượng sau những giờ học tập.</p></article>
+        <article class="hobby">
+          <img src="https://i.scdn.co/image/ab67616d0000b273fe03875e24e4c3923aaac517" alt="Ảnh bìa ca khúc Người Ấy của Trịnh Thăng Bình">
+          <div class="hobby-body">
+            <h3>🎧 Nghe nhạc – Người Ấy</h3>
+            <p>Mình thích nghe nhạc, đặc biệt là ca khúc “Người Ấy” của Trịnh Thăng Bình. Giai điệu nhẹ nhàng khiến mình muốn nghe đi nghe lại.</p>
+            <a href="https://open.spotify.com/album/7HuB2Nk9HjHlDrbVSgGD1W" target="_blank" rel="noopener">Nghe bài hát ↗</a>
+          </div>
+        </article>
+        <article class="hobby">
+          <img src="https://kankoku-drama.com/files/user/2026/ic20260316090777671969b74c216be960316.jpg" alt="Poster phim Perfect Crown">
+          <div class="hobby-body">
+            <h3>🎬 Xem phim Hàn – Perfect Crown</h3>
+            <p>Mình yêu thích những bộ phim Hàn Quốc. “Perfect Crown” là một bộ phim có hình ảnh và phong cách hoàng gia rất cuốn hút.</p>
+            <a href="https://kankoku-drama.com/news_topic/id=30182" target="_blank" rel="noopener">Tìm hiểu về phim ↗</a>
+          </div>
+        </article>
+        <article class="hobby">
+          <div class="sleep-card" role="img" aria-label="Biểu tượng giấc ngủ">😴</div>
+          <div class="hobby-body">
+            <h3>Ngủ</h3>
+            <p>Ngủ thật ngon là cách mình nạp năng lượng sau những giờ học tập căng thẳng.</p>
+          </div>
+        </article>
       </div>
     </section>
     <section id="uocmo">
-      <h2>💗 Ước mơ tương lai 💗</h2>
+      <p class="section-kicker">My dream</p>
+      <h2>Ước mơ tương lai</h2>
       <div class="dream">
         <h3>Trường Đại học Y Dược Thái Bình</h3>
-        <p>Đây là ngôi trường mình mong muốn được theo học trong tương lai. Mình sẽ cố gắng học tập, rèn luyện mỗi ngày để tiến gần hơn đến ước mơ của mình.</p>
+        <p>Đây là ngôi trường mình mong muốn được theo học trong tương lai. Mình sẽ cố gắng học tập và rèn luyện mỗi ngày để tiến gần hơn đến ước mơ của mình.</p>
         <p><a href="https://tbump.edu.vn/" target="_blank" rel="noopener">🌐 Website chính thức của trường</a></p>
       </div>
     </section>
     <section id="video">
-      <h2>🎬 Video giới thiệu Trường Đại học Y Dược Thái Bình</h2>
+      <p class="section-kicker">A place I dream of</p>
+      <h2>Video giới thiệu Trường Đại học Y Dược Thái Bình</h2>
       <p class="note">Cùng tìm hiểu về ngôi trường mà mình mong muốn được học tập nhé!</p>
       <div class="video-wrap">
         <iframe src="https://www.youtube-nocookie.com/embed/wwmOyJ08HhQ" title="Video giới thiệu Trường Đại học Y Dược Thái Bình" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </div>
     </section>
     <section class="note">
+      <p class="section-kicker">Thank you</p>
       <h2>💌 Lời nhắn nhỏ</h2>
-      <p>Cảm ơn mọi người đã ghé thăm góc nhỏ của Thóc!</p>
-      <p>“Nỗ lực hôm nay – Chạm tới ước mơ ngày mai.” 🌷</p>
+      <p>Cảm ơn mọi người đã ghé thăm thế giới nhỏ của Thóc!</p>
+      <p><em>“Nỗ lực hôm nay – Chạm tới ước mơ ngày mai.”</em> 🌷</p>
     </section>
   </main>
   <footer>
